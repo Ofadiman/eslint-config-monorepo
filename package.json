@@ -1,6 +1,5 @@
 {
   "name": "@ofadiman/eslint-configs",
-  "version": "0.0.0",
   "author": {
     "email": "ofadiman@gmail.com",
     "name": "Szymon Jaworski",
@@ -46,13 +45,10 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lerna run precommit --concurrency 2 --stream"
+      "pre-commit": "lerna run precommit --concurrency 1 --stream"
     }
   },
   "private": true,
-  "publishConfig": {
-    "access": "public"
-  },
   "workspaces": [
     "packages/*"
   ]
