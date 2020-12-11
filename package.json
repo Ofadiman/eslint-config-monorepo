@@ -1,5 +1,6 @@
 {
   "name": "@ofadiman/eslint-configs",
+  "version": "0.0.0",
   "author": {
     "email": "ofadiman@gmail.com",
     "name": "Szymon Jaworski",
@@ -7,11 +8,12 @@
   },
   "description": "Monorepo for eslint configs used by Ofadiman.",
   "scripts": {
-    "base:eslint:find:deprecated": "eslint-find-rules --deprecated --no-error packages/eslint-config-base/index.js",
-    "base:eslint:find:unused": "eslint-find-rules --unused --no-error packages/eslint-config-base/index.js",
-    "react:eslint:find:deprecated": "eslint-find-rules --unused --no-error packages/eslint-config-react/index.js",
-    "react:eslint:find:unused": "eslint-find-rules --unused --no-error packages/eslint-config-react/index.js",
-    "syncpack:format": "syncpack format"
+    "base-eslint-find-deprecated": "eslint-find-rules --deprecated --no-error packages/eslint-config-base/index.js",
+    "base-eslint-find-unused": "eslint-find-rules --unused --no-error packages/eslint-config-base/index.js",
+    "publish": "lerna publish from-package",
+    "react-eslint-find-deprecated": "eslint-find-rules --unused --no-error packages/eslint-config-react/index.js",
+    "react-eslint-find-unused": "eslint-find-rules --unused --no-error packages/eslint-config-react/index.js",
+    "syncpack-format": "syncpack format"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
@@ -47,7 +49,10 @@
       "pre-commit": "lerna run precommit --concurrency 2 --stream"
     }
   },
-  "private": true,
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "workspaces": [
     "packages/*"
   ]
