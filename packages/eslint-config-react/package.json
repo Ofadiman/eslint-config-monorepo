@@ -1,6 +1,6 @@
 {
   "name": "@ofadiman/eslint-config-react",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Ofadiman's eslint config for ReactJS applications.",
   "main": "index.js",
   "license": "MIT",

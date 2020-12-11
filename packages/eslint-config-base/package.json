@@ -1,6 +1,6 @@
 {
   "name": "@ofadiman/eslint-config-base",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Ofadiman's eslint config for NodeJS applications.",
   "main": "index.js",
   "license": "MIT",
