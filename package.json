@@ -9,7 +9,8 @@
   "scripts": {
     "base-eslint-find-deprecated": "eslint-find-rules --deprecated --no-error packages/eslint-config-base/index.js",
     "base-eslint-find-unused": "eslint-find-rules --unused --no-error packages/eslint-config-base/index.js",
-    "publish": "lerna publish from-package",
+    "lerna-publish": "lerna publish from-package",
+    "lerna-version-patch": "lerna version patch",
     "react-eslint-find-deprecated": "eslint-find-rules --unused --no-error packages/eslint-config-react/index.js",
     "react-eslint-find-unused": "eslint-find-rules --unused --no-error packages/eslint-config-react/index.js",
     "syncpack-format": "syncpack format"
