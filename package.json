@@ -1,11 +1,12 @@
 {
-  "name": "@ofadiman/eslint-configs",
+  "name": "root",
   "author": {
     "email": "ofadiman@gmail.com",
     "name": "Szymon Jaworski",
     "url": "https://github.com/Ofadiman"
   },
   "description": "Monorepo for eslint configs used by Ofadiman.",
+  "license": "MIT",
   "scripts": {
     "base-eslint-find-deprecated": "eslint-find-rules --deprecated --no-error packages/eslint-config-base/index.js",
     "base-eslint-find-unused": "eslint-find-rules --unused --no-error packages/eslint-config-base/index.js",
@@ -43,13 +44,22 @@
     "syncpack": "^5.6.10",
     "typescript": "^4.1.2"
   },
+  "bugs": "https://github.com/Ofadiman/eslint-configs/issues",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lerna run precommit --concurrency 1 --stream"
     }
   },
+  "keywords": [
+    "@ofadiman/eslint-config-base",
+    "@ofadiman/eslint-config-react"
+  ],
   "private": true,
+  "repository": "Ofadiman/eslint-configs",
   "workspaces": [
     "packages/*"
   ]

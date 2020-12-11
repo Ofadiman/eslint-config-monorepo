@@ -1,7 +1,12 @@
 {
   "name": "@ofadiman/eslint-config-react",
   "version": "0.0.3",
-  "description": "Ofadiman's eslint config for ReactJS applications.",
+  "author": {
+    "email": "ofadiman@gmail.com",
+    "name": "Szymon Jaworski",
+    "url": "https://github.com/Ofadiman"
+  },
+  "description": "Eslint config for ReactJS applications.",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -30,11 +35,36 @@
     "eslint-plugin-unicorn": "^23.0.0",
     "prettier": "^2.2.1"
   },
+  "bugs": "https://github.com/Ofadiman/eslint-configs/issues",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "keywords": [
+    "@ofadiman/eslint-config-base",
+    "@ofadiman/eslint-config-react",
+    "@typescript-eslint/eslint-plugin",
+    "@typescript-eslint/parser",
+    "eslint",
+    "eslint-plugin-import",
+    "eslint-plugin-jest",
+    "eslint-plugin-jest-dom",
+    "eslint-plugin-prettier",
+    "eslint-plugin-promise",
+    "eslint-plugin-react",
+    "eslint-plugin-react-hooks",
+    "eslint-plugin-simple-import-sort",
+    "eslint-plugin-sort-keys-fix",
+    "eslint-plugin-testing-library",
+    "eslint-plugin-typescript-sort-keys",
+    "eslint-plugin-unicorn",
+    "prettier"
+  ],
   "lint-staged": {
     "*.{js,jsx,ts,tsx,md,html,css}": "prettier --write"
   },
   "private": false,
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "repository": "Ofadiman/eslint-configs"
 }
