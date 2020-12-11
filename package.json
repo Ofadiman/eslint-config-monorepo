@@ -1,0 +1,54 @@
+{
+  "name": "@ofadiman/eslint-configs",
+  "author": {
+    "email": "ofadiman@gmail.com",
+    "name": "Szymon Jaworski",
+    "url": "https://github.com/Ofadiman"
+  },
+  "description": "Monorepo for eslint configs used by Ofadiman.",
+  "scripts": {
+    "base:eslint:find:deprecated": "eslint-find-rules --deprecated --no-error packages/eslint-config-base/index.js",
+    "base:eslint:find:unused": "eslint-find-rules --unused --no-error packages/eslint-config-base/index.js",
+    "react:eslint:find:deprecated": "eslint-find-rules --unused --no-error packages/eslint-config-react/index.js",
+    "react:eslint:find:unused": "eslint-find-rules --unused --no-error packages/eslint-config-react/index.js",
+    "syncpack:format": "syncpack format"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/config-lerna-scopes": "^11.0.0",
+    "@prettier/plugin-xml": "^0.12.0",
+    "@typescript-eslint/eslint-plugin": "^4.9.1",
+    "@typescript-eslint/parser": "^4.9.1",
+    "eslint": "^7.15.0",
+    "eslint-find-rules": "^3.6.1",
+    "eslint-plugin-better-styled-components": "^1.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.3",
+    "eslint-plugin-jest-dom": "^3.6.3",
+    "eslint-plugin-prettier": "^3.2.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^6.0.1",
+    "eslint-plugin-sort-keys-fix": "^1.1.1",
+    "eslint-plugin-testing-library": "^3.10.1",
+    "eslint-plugin-typescript-sort-keys": "^1.5.0",
+    "eslint-plugin-unicorn": "^23.0.0",
+    "husky": "^4.3.5",
+    "lerna": "^3.22.1",
+    "prettier": "^2.2.1",
+    "syncpack": "^5.6.10",
+    "typescript": "^4.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lerna run precommit --concurrency 2 --stream"
+    }
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
