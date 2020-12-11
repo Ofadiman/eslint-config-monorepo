@@ -1,12 +1,12 @@
 {
   "name": "@ofadiman/eslint-config-base",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": {
     "email": "ofadiman@gmail.com",
     "name": "Szymon Jaworski",
     "url": "https://github.com/Ofadiman"
   },
-  "description": "Eslint config for NodeJS applications.",
+  "description": "Eslint config serving as a base for more advanced configs.",
   "main": "index.js",
   "license": "MIT",
   "scripts": {

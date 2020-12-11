@@ -1,9 +1,7 @@
 module.exports = {
   env: {
-    commonjs: true,
     es2020: true,
-    jest: true,
-    node: true
+    jest: true
   },
   reportUnusedDisableDirectives: true,
   parser: '@typescript-eslint/parser',

@@ -8,12 +8,14 @@
   "description": "Monorepo for eslint configs used by Ofadiman.",
   "license": "MIT",
   "scripts": {
-    "base-eslint-find-deprecated": "eslint-find-rules --deprecated --no-error packages/eslint-config-base/index.js",
-    "base-eslint-find-unused": "eslint-find-rules --unused --no-error packages/eslint-config-base/index.js",
+    "eslint-find-rules-deprecated-base": "eslint-find-rules --deprecated --no-error packages/eslint-config-base/index.js",
+    "eslint-find-rules-deprecated-node": "eslint-find-rules --deprecated --no-error packages/eslint-config-node/index.js",
+    "eslint-find-rules-deprecated-react": "eslint-find-rules --deprecated --no-error packages/eslint-config-react/index.js",
+    "eslint-find-rules-unused-base": "eslint-find-rules --unused --no-error packages/eslint-config-base/index.js",
+    "eslint-find-rules-unused-node": "eslint-find-rules --unused --no-error packages/eslint-config-node/index.js",
+    "eslint-find-rules-unused-react": "eslint-find-rules --unused --no-error packages/eslint-config-react/index.js",
     "lerna-publish": "lerna publish from-package",
     "lerna-version-patch": "lerna version patch",
-    "react-eslint-find-deprecated": "eslint-find-rules --unused --no-error packages/eslint-config-react/index.js",
-    "react-eslint-find-unused": "eslint-find-rules --unused --no-error packages/eslint-config-react/index.js",
     "syncpack-format": "syncpack format"
   },
   "devDependencies": {
@@ -29,6 +31,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.3",
     "eslint-plugin-jest-dom": "^3.6.3",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.2.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.21.5",

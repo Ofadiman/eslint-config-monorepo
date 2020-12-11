@@ -1,13 +1,13 @@
 {
   "packages": ["packages/*"],
   "npmClient": "yarn",
-  "version": "independent",
+  "version": "0.0.4",
   "useWorkspaces": true,
   "command": {
     "version": {
       "allowBranch": ["main"],
       "conventionalCommits": true,
-      "message": "chore: publish a new release"
+      "message": "chore: publish %s"
     }
   }
 }
