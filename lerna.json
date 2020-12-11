@@ -1,11 +1,15 @@
 {
-  "packages": ["packages/*"],
+  "packages": [
+    "packages/*"
+  ],
   "npmClient": "yarn",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "useWorkspaces": true,
   "command": {
     "version": {
-      "allowBranch": ["main"],
+      "allowBranch": [
+        "main"
+      ],
       "conventionalCommits": true,
       "message": "chore: publish %s"
     }
