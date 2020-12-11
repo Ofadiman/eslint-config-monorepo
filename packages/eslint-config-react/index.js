@@ -12,11 +12,9 @@ module.exports = {
       version: 'detect'
     }
   },
-  plugins: ['jest-dom', 'react', 'react-hooks', 'testing-library', 'better-styled-components'],
+  plugins: ['jest-dom', 'react', 'react-hooks', 'testing-library'],
   extends: [
-    ...['jest-dom', 'react', 'react-hooks', 'testing-library', 'better-styled-components'].map((path) =>
-      require.resolve(`./rules/${path}`)
-    ),
+    ...['jest-dom', 'react', 'react-hooks', 'testing-library'].map((path) => require.resolve(`./rules/${path}`)),
     '@ofadiman/eslint-config-base'
   ]
 }
