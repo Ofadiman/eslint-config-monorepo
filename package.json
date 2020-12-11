@@ -14,7 +14,6 @@
     "eslint-find-rules-unused-base": "eslint-find-rules --unused --no-error packages/eslint-config-base/index.js",
     "eslint-find-rules-unused-node": "eslint-find-rules --unused --no-error packages/eslint-config-node/index.js",
     "eslint-find-rules-unused-react": "eslint-find-rules --unused --no-error packages/eslint-config-react/index.js",
-    "lerna-publish": "lerna publish from-package",
     "lerna-version-patch": "lerna version patch",
     "syncpack-format": "syncpack format"
   },
@@ -59,6 +58,7 @@
   },
   "keywords": [
     "@ofadiman/eslint-config-base",
+    "@ofadiman/eslint-config-node",
     "@ofadiman/eslint-config-react"
   ],
   "private": true,

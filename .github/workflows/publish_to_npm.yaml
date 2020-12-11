@@ -1,0 +1,34 @@
+name: Publish to NPM
+
+on:
+  create:
+    tags:
+      - v*
+
+env:
+  NPM_USER: ${{ secrets.NPM_USER }}
+  NPM_PASS: ${{ secrets.NPM_PASS }}
+  NPM_EMAIL: ${{ secrets.NPM_EMAIL }}
+
+jobs:
+  publish_to_npm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: |
+          npm i -g lerna
+          npm i -g npm-cli-login
+
+      - name: Login to NPM
+        run: npm-cli-login
+
+      - name: Publish packages to NPM
+        run: lerna publish --yes
