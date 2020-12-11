@@ -1,9 +1,14 @@
 name: Publish to NPM
 
+#on:
+#  create:
+#    tags:
+#      - v*
+
 on:
-  create:
-    tags:
-      - v*
+  push:
+    branches:
+      - main
 
 env:
   NPM_USER: ${{ secrets.NPM_USER }}
@@ -14,21 +19,26 @@ jobs:
   publish_to_npm:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Use "actions/checkout@master"
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 0
 
-      - name: Setup node
-        uses: actions/setup-node@v1
+      - name: Checkout HEAD
+        run: git checkout ${GITHUB_REF:11}
+
+      - name: Use "actions/setup-node@master"
+        uses: actions/setup-node@master
         with:
           node-version: 14
 
-      - name: Install dependencies
+      - name: Setup git config
         run: |
-          npm i -g lerna
-          npm i -g npm-cli-login
+          git config --global user.name ${NPM_USER}
+          git config --global user.email ${NPM_EMAIL}
 
       - name: Login to NPM
-        run: npm-cli-login
+        run: npx npm-cli-login
 
       - name: Publish packages to NPM
-        run: lerna publish --yes
+        run: npx lerna publish patch --yes
