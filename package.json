@@ -49,7 +49,7 @@
       "pre-commit": "lerna run precommit --concurrency 2 --stream"
     }
   },
-  "private": false,
+  "private": true,
   "publishConfig": {
     "access": "public"
   },

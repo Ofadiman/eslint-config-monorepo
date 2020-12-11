@@ -4,5 +4,6 @@ node_modules
 # IDE
 .idea
 
-# Errors
+# Debug
 yarn-error.log
+lerna-debug.log
