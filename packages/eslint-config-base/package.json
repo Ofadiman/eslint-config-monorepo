@@ -6,7 +6,7 @@
     "name": "Szymon Jaworski",
     "url": "https://github.com/Ofadiman"
   },
-  "description": "Eslint config serving as a base for more advanced configs.",
+  "description": "Eslint config that serves as the basis for other config files.",
   "main": "index.js",
   "license": "MIT",
   "scripts": {

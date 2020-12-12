@@ -41,7 +41,7 @@ module.exports = {
     'getter-return': 'error',
     'grouped-accessor-pairs': 'error',
     'guard-for-in': 'error',
-    'id-denylist': ['error', 'data', 'err', 'e', 'cb', 'callback'],
+    'id-denylist': 'off',
     'id-length': 'off',
     'id-match': 'off',
     'implicit-arrow-linebreak': 'off',
