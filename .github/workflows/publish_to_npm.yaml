@@ -9,7 +9,7 @@ env:
   NODE_VERSION: 14.15.1
 
 jobs:
-  continuous_integration:
+  publish_to_npm:
     runs-on: ubuntu-latest
     if: "contains(github.event.head_commit.message , 'publish a new version')"
     steps:
