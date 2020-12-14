@@ -1,0 +1,33 @@
+name: Publish to NPM
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  NODE_VERSION: 14.15.1
+
+jobs:
+  continuous_integration:
+    runs-on: ubuntu-latest
+    if: "contains(github.event.head_commit.message , 'publish a new version')"
+    steps:
+      - name: Use actions/checkout@master
+        uses: actions/checkout@master
+
+      - name: Use "actions/setup-node@master" with Node version ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@master
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies globally
+        run: |
+          npm i -g lerna
+          npm i -g npm-cli-login
+
+      - name: Login to NPM
+        run: npm-cli-login -u ${{ secrets.NPM_USER }} -p ${{ secrets.NPM_PASS }} -e ${{ secrets.NPM_EMAIL }}
+
+      - name: Publish to NPM
+        run: lerna publish from-git --yes
