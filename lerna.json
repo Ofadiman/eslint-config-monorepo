@@ -4,11 +4,13 @@
   "npmClient": "yarn",
   "useWorkspaces": true,
   "command": {
+    "publish": {
+      "allowBranch": ["main"]
+    },
     "version": {
       "allowBranch": ["main"],
-      "conventionalCommits": true,
-      "ignoreChanges": ["**/*.md"],
-      "message": "chore: publish a new version"
+      "ignoreChanges": ["**/*.test.ts", "**/*.test.utils.ts", "**/*.md"],
+      "message": "chore: new release"
     }
   }
 }

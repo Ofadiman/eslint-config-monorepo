@@ -7,3 +7,6 @@ node_modules
 # Debug
 yarn-error.log
 lerna-debug.log
+
+# Environment
+.env.npm

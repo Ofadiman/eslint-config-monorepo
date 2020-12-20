@@ -14,7 +14,7 @@
     "eslint-find-rules-unused-base": "eslint-find-rules --unused --no-error packages/eslint-config-base/index.js",
     "eslint-find-rules-unused-node": "eslint-find-rules --unused --no-error packages/eslint-config-node/index.js",
     "eslint-find-rules-unused-react": "eslint-find-rules --unused --no-error packages/eslint-config-react/index.js",
-    "lerna-version-patch": "lerna version patch",
+    "patch": "./publish.patch.sh",
     "syncpack-format": "syncpack format"
   },
   "devDependencies": {
@@ -42,6 +42,7 @@
     "eslint-plugin-unicorn": "^23.0.0",
     "husky": "^4.3.5",
     "lerna": "^3.22.1",
+    "npm-cli-login": "^0.1.1",
     "prettier": "^2.2.1",
     "syncpack": "^5.6.10",
     "typescript": "^4.1.2"
