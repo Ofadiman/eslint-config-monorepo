@@ -130,7 +130,7 @@ module.exports = {
     'no-loss-of-precision': 'error',
     'no-magic-numbers': 'off',
     'no-misleading-character-class': 'error',
-    'no-mixed-operators': 'error',
+    'no-mixed-operators': 'off',
     'no-mixed-spaces-and-tabs': 'error',
     'no-multi-assign': 'error',
     'no-multi-spaces': 'error',
