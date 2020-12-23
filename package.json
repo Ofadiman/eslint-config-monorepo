@@ -5,7 +5,7 @@
     "name": "Szymon Jaworski",
     "url": "https://github.com/Ofadiman"
   },
-  "description": "Monorepo for eslint configs used by Ofadiman.",
+  "description": "Monorepo for eslint configs.",
   "license": "MIT",
   "scripts": {
     "eslint-find-rules-deprecated-base": "eslint-find-rules --deprecated --no-error packages/eslint-config-base/index.js",
