@@ -196,7 +196,7 @@ module.exports = {
     'no-useless-catch': 'error',
     'no-useless-computed-key': 'error',
     'no-useless-concat': 'error',
-    'no-useless-constructor': 'error',
+    'no-useless-constructor': 'off',
     'no-useless-escape': 'error',
     'no-useless-rename': 'error',
     'no-useless-return': 'error',

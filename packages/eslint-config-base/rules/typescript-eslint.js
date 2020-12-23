@@ -12,7 +12,7 @@ module.exports = {
     '@typescript-eslint/comma-spacing': 'off',
     '@typescript-eslint/consistent-indexed-object-style': 'off',
     '@typescript-eslint/consistent-type-assertions': 'error',
-    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     '@typescript-eslint/consistent-type-imports': ['error', { disallowTypeAnnotations: true, prefer: 'no-type-imports' }],
     '@typescript-eslint/default-param-last': 'off',
     '@typescript-eslint/dot-notation': 'off',
@@ -89,7 +89,7 @@ module.exports = {
     '@typescript-eslint/no-unsafe-member-access': 'error',
     '@typescript-eslint/no-unsafe-return': 'error',
     '@typescript-eslint/no-unused-expressions': 'off',
-    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_', ignoreRestSiblings: true }],
     '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/no-useless-constructor': 'off',
     '@typescript-eslint/no-var-requires': 'off',
@@ -127,6 +127,16 @@ module.exports = {
     '@typescript-eslint/unified-signatures': 'error'
   },
   overrides: [
+    {
+      files: ['codegen/**'],
+      rules: {
+        '@typescript-eslint/no-require-imports': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+        '@typescript-eslint/restrict-template-expressions': 'off',
+        '@typescript-eslint/strict-boolean-expressions': 'off'
+      }
+    },
     {
       files: '*.js',
       rules: {
