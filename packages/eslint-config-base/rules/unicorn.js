@@ -23,7 +23,7 @@ module.exports = {
     'unicorn/no-new-buffer': 'error',
     'unicorn/no-null': 'off',
     'unicorn/no-object-as-default-parameter': 'error',
-    'unicorn/no-process-exit': 'error',
+    'unicorn/no-process-exit': 'off',
     'unicorn/no-reduce': 'off',
     'unicorn/no-unreadable-array-destructuring': 'error',
     'unicorn/no-unsafe-regex': 'off',
