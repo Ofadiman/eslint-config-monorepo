@@ -138,6 +138,12 @@ module.exports = {
       }
     },
     {
+      files: ['plopfile.ts'],
+      rules: {
+        'import/no-default-export': 'off'
+      }
+    },
+    {
       files: '*.js',
       rules: {
         '@typescript-eslint/adjacent-overload-signatures': 'off',
