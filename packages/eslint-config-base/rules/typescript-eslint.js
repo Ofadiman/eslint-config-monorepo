@@ -30,7 +30,7 @@ module.exports = {
     '@typescript-eslint/naming-convention': [
       'error',
       { selector: 'typeLike', format: ['PascalCase'] },
-      { selector: 'variable', format: ['camelCase', 'PascalCase'] },
+      { selector: 'variable', format: ['camelCase', 'PascalCase', 'UPPER_CASE'] },
       {
         selector: 'variable',
         types: ['boolean'],

@@ -43,5 +43,11 @@ module.exports = {
     'typescript-eslint',
     'typescript-sort-keys',
     'unicorn'
-  ].map((path) => require.resolve(`./rules/${path}`))
+  ].map((path) => require.resolve(`./rules/${path}`)),
+  overrides: [
+    {
+      files: ['*.js'],
+      parser: 'babel-eslint'
+    }
+  ]
 }
