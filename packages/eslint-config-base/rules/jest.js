@@ -1,11 +1,11 @@
 module.exports = {
   rules: {
-    'jest/consistent-test-it': 'off',
+    'jest/consistent-test-it': ['error', { fn: 'test', withinDescribe: 'test' }],
     'jest/expect-expect': 'error',
     'jest/lowercase-name': ['error', { ignoreTopLevelDescribe: true, allowedPrefixes: ['GET'] }],
     'jest/no-alias-methods': 'error',
     'jest/no-commented-out-tests': 'error',
-    'jest/no-conditional-expect': 'error',
+    'jest/no-conditional-expect': 'off',
     'jest/no-deprecated-functions': 'error',
     'jest/no-disabled-tests': 'warn',
     'jest/no-done-callback': 'error',
@@ -37,6 +37,7 @@ module.exports = {
     'jest/prefer-todo': 'off',
     'jest/require-to-throw-message': 'off',
     'jest/require-top-level-describe': 'error',
+    'jest/unbound-method': 'off',
     'jest/valid-describe': 'error',
     'jest/valid-expect': 'error',
     'jest/valid-expect-in-promise': 'error',
