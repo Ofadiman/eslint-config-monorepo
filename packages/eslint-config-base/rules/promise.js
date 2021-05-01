@@ -11,7 +11,7 @@ module.exports = {
     'promise/no-return-in-finally': 'error',
     'promise/no-return-wrap': 'error',
     'promise/param-names': 'error',
-    'promise/prefer-await-to-callbacks': 'error',
+    'promise/prefer-await-to-callbacks': 'off',
     'promise/prefer-await-to-then': 'error',
     'promise/valid-params': 'error'
   }
