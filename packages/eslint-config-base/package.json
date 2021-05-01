@@ -1,6 +1,6 @@
 {
   "name": "@ofadiman/eslint-config-base",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "author": {
     "email": "ofadiman@gmail.com",
     "name": "Szymon Jaworski",
@@ -20,6 +20,7 @@
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
+    "babel-eslint": "^10.1.0",
     "eslint": "^7.22.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.3.2",
@@ -29,8 +30,7 @@
     "eslint-plugin-sort-keys-fix": "^1.1.1",
     "eslint-plugin-typescript-sort-keys": "^1.5.0",
     "eslint-plugin-unicorn": "^23.0.0",
-    "prettier": "^2.2.1",
-    "babel-eslint": "^10.1.0"
+    "prettier": "^2.2.1"
   },
   "bugs": "https://github.com/Ofadiman/eslint-configs/issues",
   "engines": {
