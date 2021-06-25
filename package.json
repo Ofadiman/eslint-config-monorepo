@@ -9,10 +9,8 @@
   "license": "MIT",
   "scripts": {
     "eslint-find-rules-deprecated-base": "eslint-find-rules --deprecated --no-error packages/eslint-config-base/index.js",
-    "eslint-find-rules-deprecated-node": "eslint-find-rules --deprecated --no-error packages/eslint-config-node/index.js",
     "eslint-find-rules-deprecated-react": "eslint-find-rules --deprecated --no-error packages/eslint-config-react/index.js",
     "eslint-find-rules-unused-base": "eslint-find-rules --unused --no-error packages/eslint-config-base/index.js",
-    "eslint-find-rules-unused-node": "eslint-find-rules --unused --no-error packages/eslint-config-node/index.js",
     "eslint-find-rules-unused-react": "eslint-find-rules --unused --no-error packages/eslint-config-react/index.js",
     "ncu": "ncu -u --target minor",
     "patch": "./publish.patch.sh",
@@ -60,7 +58,6 @@
   },
   "keywords": [
     "@ofadiman/eslint-config-base",
-    "@ofadiman/eslint-config-node",
     "@ofadiman/eslint-config-react"
   ],
   "private": true,

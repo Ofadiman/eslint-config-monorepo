@@ -4,11 +4,10 @@ Monorepo provides extensible configs for [eslint](https://eslint.org/).
 
 ## Available configurations
 
-Currently, there are 3 available configurations:
+Currently, there are 2 available configurations:
 
-- `@ofadiman/eslint-config-base` - Common rules valid for both `NodeJS` and `ReactJS` development.
-- `@ofadiman/eslint-config-node` - Rules specific for `NodeJS` development.
-- `@ofadiman/eslint-config-react` - Rules specific for `ReactJS` development.
+- `@ofadiman/eslint-config-base` - Configuration suitable for `NodeJS` and `ReactJS` development.
+- `@ofadiman/eslint-config-react` - Extended configuration suitable for `ReactJS` development.
 
 ## Installation
 
@@ -32,4 +31,4 @@ module.exports = {
 
 ## Info
 
-- The configs for `NodeJS` and `ReactJS` already have a base config listed in their dependencies, so you don't have to install it manually.
+- The config for `ReactJS` already has a base config listed in its peer dependencies, so you don't have to install it manually.
