@@ -13,7 +13,9 @@
     "eslint-find-rules-unused-base": "eslint-find-rules --unused --no-error packages/eslint-config-base/index.js",
     "eslint-find-rules-unused-react": "eslint-find-rules --unused --no-error packages/eslint-config-react/index.js",
     "ncu": "ncu -u --target minor",
-    "patch": "./publish.patch.sh",
+    "publish-major": "./publish.major.sh",
+    "publish-minor": "./publish.minor.sh",
+    "publish-patch": "./publish.patch.sh",
     "syncpack-format": "syncpack format"
   },
   "devDependencies": {
