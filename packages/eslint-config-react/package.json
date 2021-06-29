@@ -1,6 +1,6 @@
 {
   "name": "@ofadiman/eslint-config-react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "email": "ofadiman@gmail.com",
     "name": "Szymon Jaworski",
@@ -70,5 +70,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "repository": "Ofadiman/eslint-configs"
+  "repository": "Ofadiman/eslint-configs",
+  "gitHead": "f84ce9f960b9b8a1ac583c8e306ddd5def62df3e"
 }
