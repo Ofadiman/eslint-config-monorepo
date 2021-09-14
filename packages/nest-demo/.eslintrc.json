@@ -1,0 +1,4 @@
+{
+  "extends": ["@ofadiman/eslint-config-base"],
+  "parser": "@typescript-eslint/parser"
+}

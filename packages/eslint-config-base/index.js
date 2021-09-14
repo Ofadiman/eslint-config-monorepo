@@ -22,9 +22,10 @@ module.exports = {
     }
   },
   plugins: [
-    '@typescript-eslint',
+    '@typescript-eslint/eslint-plugin',
     'import',
     'jest',
+    'jest-formatting',
     'prettier',
     'promise',
     'simple-import-sort',
@@ -36,6 +37,7 @@ module.exports = {
     'eslint',
     'import',
     'jest',
+    'jest-formatting',
     'prettier',
     'promise',
     'simple-import-sort',
@@ -43,11 +45,5 @@ module.exports = {
     'typescript-eslint',
     'typescript-sort-keys',
     'unicorn'
-  ].map((path) => require.resolve(`./rules/${path}`)),
-  overrides: [
-    {
-      files: ['*.js'],
-      parser: 'babel-eslint'
-    }
-  ]
+  ].map((path) => require.resolve(`./rules/${path}`))
 }

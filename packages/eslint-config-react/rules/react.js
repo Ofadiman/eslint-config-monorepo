@@ -3,91 +3,91 @@ module.exports = {
     'react/boolean-prop-naming': ['error', { rule: '^(is|has|should|will|can|did)[A-Z]([A-Za-z0-9]?)+' }],
     'react/button-has-type': 'error',
     'react/default-props-match-prop-types': 'off',
-    'react/destructuring-assignment': 'error',
+    'react/destructuring-assignment': 'off', // Forces to destructure `props`.
     'react/display-name': 'error',
     'react/forbid-component-props': 'off',
     'react/forbid-dom-props': 'off',
     'react/forbid-elements': 'off',
     'react/forbid-foreign-prop-types': 'off',
     'react/forbid-prop-types': 'off',
-    'react/function-component-definition': 'off',
+    'react/function-component-definition': 'off', // Autofix does not work well with TypeScript. Autofix uses `var` declaration.
     'react/jsx-boolean-value': ['error', 'always'],
-    'react/jsx-child-element-spacing': 'off',
-    'react/jsx-closing-bracket-location': 'off',
-    'react/jsx-closing-tag-location': 'off',
+    'react/jsx-child-element-spacing': 'off', // Overrides prettier config.
+    'react/jsx-closing-bracket-location': 'off', // Overrides prettier config.
+    'react/jsx-closing-tag-location': 'off', // Overrides prettier config.
     'react/jsx-curly-brace-presence': ['error', { props: 'always', children: 'always' }],
-    'react/jsx-curly-newline': 'off',
-    'react/jsx-curly-spacing': 'off',
-    'react/jsx-equals-spacing': 'off',
-    'react/jsx-filename-extension': 'off',
-    'react/jsx-first-prop-new-line': 'off',
-    'react/jsx-fragments': 'off',
+    'react/jsx-curly-newline': 'off', // Overrides prettier config.
+    'react/jsx-curly-spacing': 'off', // Overrides prettier config.
+    'react/jsx-equals-spacing': 'off', // Overrides prettier config.
+    'react/jsx-filename-extension': 'off', // Does not work with TypeScript eslint.
+    'react/jsx-first-prop-new-line': 'off', // Overrides prettier config.
+    'react/jsx-fragments': ['error', 'element'],
     'react/jsx-handler-names': 'error',
-    'react/jsx-indent': 'off',
-    'react/jsx-indent-props': 'off',
+    'react/jsx-indent': 'off', // Overrides prettier config.
+    'react/jsx-indent-props': 'off', // Overrides prettier config.
     'react/jsx-key': 'error',
-    'react/jsx-max-depth': 'off',
-    'react/jsx-max-props-per-line': 'off',
-    'react/jsx-newline': 'off',
-    'react/jsx-no-bind': 'off',
-    'react/jsx-no-comment-textnodes': 'off',
-    'react/jsx-no-constructed-context-values': 'off',
-    'react/jsx-no-duplicate-props': 'off',
-    'react/jsx-no-literals': 'off',
-    'react/jsx-no-script-url': 'off',
-    'react/jsx-no-target-blank': 'off',
-    'react/jsx-no-undef': 'off',
+    'react/jsx-max-depth': 'off', // It's inconvenient.
+    'react/jsx-max-props-per-line': 'off', // Overrides prettier config.
+    'react/jsx-newline': ['error', { prevent: true }],
+    'react/jsx-no-bind': 'off', // Used only for classed components.
+    'react/jsx-no-comment-textnodes': 'error',
+    'react/jsx-no-constructed-context-values': 'error',
+    'react/jsx-no-duplicate-props': 'error',
+    'react/jsx-no-literals': 'off', // Already handled by `react/jsx-curly-brace-presence` rule.
+    'react/jsx-no-script-url': 'error',
+    'react/jsx-no-target-blank': 'error',
+    'react/jsx-no-undef': 'off', // Already handled by TypeScript.
     'react/jsx-no-useless-fragment': 'error',
-    'react/jsx-one-expression-per-line': 'off',
-    'react/jsx-pascal-case': 'off',
-    'react/jsx-props-no-multi-spaces': 'off',
-    'react/jsx-props-no-spreading': 'off',
-    'react/jsx-sort-default-props': 'off',
+    'react/jsx-one-expression-per-line': 'off', // Overrides prettier config.
+    'react/jsx-pascal-case': 'error',
+    'react/jsx-props-no-multi-spaces': 'off', // Already handled by prettier.
+    'react/jsx-props-no-spreading': 'off', // Shows errors with 3rd party libraries (e.g. react-hook-form).
+    'react/jsx-sort-default-props': 'off', // Already handled by `sort-keys-fix/sort-keys-fix` rule.
     'react/jsx-sort-props': 'error',
-    'react/jsx-tag-spacing': 'off',
-    'react/jsx-uses-react': 'off',
-    'react/jsx-uses-vars': 'error',
-    'react/jsx-wrap-multilines': 'error',
-    'react/no-access-state-in-setstate': 'off',
-    'react/no-adjacent-inline-elements': 'off',
-    'react/no-array-index-key': 'off',
+    'react/jsx-tag-spacing': 'off', // Overrides prettier config.
+    'react/jsx-uses-react': 'error',
+    'react/jsx-uses-vars': 'off', // Already handled by TypeScript.
+    'react/jsx-wrap-multilines': 'off', // Overrides prettier config.
+    'react/no-access-state-in-setstate': 'off', // Used only for classed components.
+    'react/no-adjacent-inline-elements': 'off', // Overrides prettier config.
+    'react/no-array-index-key': 'error',
     'react/no-children-prop': 'error',
-    'react/no-danger': 'off',
-    'react/no-danger-with-children': 'off',
+    'react/no-danger': 'off', // Not helpful because you are not using dangerous properties when there is no need anyway.
+    'react/no-danger-with-children': 'off', // Not helpful because you are not using dangerous properties when there is no need anyway.
     'react/no-deprecated': 'error',
-    'react/no-did-mount-set-state': 'off',
-    'react/no-did-update-set-state': 'off',
-    'react/no-direct-mutation-state': 'off',
+    'react/no-did-mount-set-state': 'off', // Used only for classed components.
+    'react/no-did-update-set-state': 'off', // Used only for classed components.
+    'react/no-direct-mutation-state': 'off', // Used only for classed components.
     'react/no-find-dom-node': 'error',
-    'react/no-is-mounted': 'off',
-    'react/no-multi-comp': 'off',
-    'react/no-redundant-should-component-update': 'off',
-    'react/no-render-return-value': 'off',
-    'react/no-set-state': 'off',
+    'react/no-is-mounted': 'off', // Used only for classed components.
+    'react/no-multi-comp': 'error',
+    'react/no-redundant-should-component-update': 'off', // Used only for classed components.
+    'react/no-render-return-value': 'error',
+    'react/no-set-state': 'off', // Used only for classed components.
     'react/no-string-refs': 'error',
-    'react/no-this-in-sfc': 'off',
-    'react/no-typos': 'off',
+    'react/no-this-in-sfc': 'error',
+    'react/no-typos': 'off', // Already handled by TypeScript.
     'react/no-unescaped-entities': 'error',
     'react/no-unknown-property': 'error',
-    'react/no-unsafe': 'off',
-    'react/no-unstable-nested-components': 'off',
-    'react/no-unused-prop-types': 'off',
-    'react/no-unused-state': 'off',
-    'react/no-will-update-set-state': 'off',
-    'react/prefer-es6-class': 'off',
-    'react/prefer-read-only-props': 'off',
-    'react/prefer-stateless-function': 'off',
-    'react/prop-types': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'react/require-default-props': 'off',
-    'react/require-optimization': 'off',
-    'react/require-render-return': 'off',
-    'react/self-closing-comp': 'off',
-    'react/sort-comp': 'off',
-    'react/sort-prop-types': 'off',
-    'react/state-in-constructor': 'off',
-    'react/static-property-placement': 'off',
-    'react/style-prop-object': 'off',
-    'react/void-dom-elements-no-children': 'off'
+    'react/no-unsafe': 'off', // Used only for classed components.
+    'react/no-unstable-nested-components': 'error',
+    'react/no-unused-prop-types': 'off', // Already handled by TypeScript.
+    'react/no-unused-state': 'off', // Used only for classed components.
+    'react/no-will-update-set-state': 'off', // Used only for classed components.
+    'react/prefer-es6-class': 'off', // Used only for classed components.
+    'react/prefer-read-only-props': 'off', // Works only for flow.
+    'react/prefer-stateless-function': 'error',
+    'react/prop-types': 'off', // Already handled by TypeScript.
+    'react/react-in-jsx-scope': 'error',
+    'react/require-default-props': 'off', // Already handled by TypeScript.
+    'react/require-optimization': 'off', // Used only for classed components.
+    'react/require-render-return': 'off', // Used only for classed components.
+    'react/self-closing-comp': 'error',
+    'react/sort-comp': 'off', // Used only for classed components.
+    'react/sort-prop-types': 'off', // Not helpful because you are not using `prop-types` in TypeScript.
+    'react/state-in-constructor': 'off', // Used only for classed components.
+    'react/static-property-placement': 'off', // Used only for classed components.
+    'react/style-prop-object': 'off', // Already handled by TypeScript.
+    'react/void-dom-elements-no-children': 'error'
   }
 }

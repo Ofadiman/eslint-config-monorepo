@@ -8,45 +8,33 @@
   "description": "Monorepo for eslint configs.",
   "license": "MIT",
   "scripts": {
+    "connect": "docker-compose exec eslint-configs-nest-demo bash",
+    "dev": "yarn up && yarn logs",
     "eslint-find-rules-deprecated-base": "eslint-find-rules --deprecated --no-error packages/eslint-config-base/index.js",
     "eslint-find-rules-deprecated-react": "eslint-find-rules --deprecated --no-error packages/eslint-config-react/index.js",
     "eslint-find-rules-unused-base": "eslint-find-rules --unused --no-error packages/eslint-config-base/index.js",
     "eslint-find-rules-unused-react": "eslint-find-rules --unused --no-error packages/eslint-config-react/index.js",
+    "logs": "docker-compose logs --follow --timestamps --tail 1000 eslint-configs-nest-demo",
     "ncu": "ncu -u --target minor",
-    "publish-major": "./publish.major.sh",
-    "publish-minor": "./publish.minor.sh",
-    "publish-patch": "./publish.patch.sh",
-    "syncpack-format": "syncpack format"
+    "publish-major": "publish.major.sh",
+    "publish-minor": "publish.minor.sh",
+    "publish-patch": "publish.patch.sh",
+    "stop": "docker-compose stop",
+    "syncpack-format": "syncpack format",
+    "up": "docker-compose up -d"
   },
   "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "@commitlint/config-lerna-scopes": "^11.0.0",
-    "@prettier/plugin-xml": "^0.13.1",
-    "@typescript-eslint/eslint-plugin": "^4.28.0",
-    "@typescript-eslint/parser": "^4.28.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.29.0",
-    "eslint-find-rules": "^3.6.1",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jest": "^24.3.6",
-    "eslint-plugin-jest-dom": "^3.9.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-sort-keys-fix": "^1.1.1",
-    "eslint-plugin-testing-library": "^4.6.0",
-    "eslint-plugin-typescript-sort-keys": "^1.7.0",
-    "eslint-plugin-unicorn": "^33.0.1",
-    "husky": "^4.3.8",
-    "lerna": "^3.22.1",
-    "npm-check-updates": "^10.3.1",
-    "npm-cli-login": "^0.1.1",
-    "prettier": "^2.3.1",
-    "syncpack": "^5.7.11",
-    "typescript": "^4.3.4"
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
+    "@commitlint/config-lerna-scopes": "11.0.0",
+    "@prettier/plugin-xml": "0.13.1",
+    "eslint-find-rules": "3.6.1",
+    "husky": "4.3.8",
+    "lerna": "3.22.1",
+    "npm-check-updates": "10.3.1",
+    "npm-cli-login": "0.1.1",
+    "prettier": "2.3.2",
+    "syncpack": "5.7.11"
   },
   "bugs": "https://github.com/Ofadiman/eslint-configs/issues",
   "engines": {
@@ -63,8 +51,5 @@
     "@ofadiman/eslint-config-react"
   ],
   "private": true,
-  "repository": "Ofadiman/eslint-configs",
-  "workspaces": [
-    "packages/*"
-  ]
+  "repository": "Ofadiman/eslint-configs"
 }
