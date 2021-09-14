@@ -18,7 +18,7 @@
     "lint-staged": "^10.5.3"
   },
   "peerDependencies": {
-    "@ofadiman/eslint-config-base": "1.1.0",
+    "@ofadiman/eslint-config-base": "latest",
     "@typescript-eslint/eslint-plugin": "4.28.0",
     "@typescript-eslint/parser": "4.28.0",
     "eslint": "7.29.0",
