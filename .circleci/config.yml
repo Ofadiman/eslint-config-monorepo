@@ -9,8 +9,7 @@ jobs:
   deploy:
     <<: *defaults
     steps:
-      - attach_workspace:
-          at: ~/repo
+      - checkout
       - run:
           name: Authenticate with registry
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
@@ -22,9 +21,4 @@ workflows:
   version: 2
   deploy_to_npm:
     jobs:
-      - deploy:
-          filters:
-            tags:
-              only: /^v.*/
-            branches:
-              ignore: /.*/
+      - deploy
